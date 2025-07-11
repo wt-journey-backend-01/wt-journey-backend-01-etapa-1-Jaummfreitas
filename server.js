@@ -29,7 +29,7 @@ app.post('/contato', (req, res) => {
     const email = req.body.email;
     const assunto = req.body.assunto;
     const mensagem = req.body.mensagem;
-    res.send(`Obrigado ${nome} pelo contato! Seu email é ${email}, assunto: ${assunto}, mensagem: ${mensagem} <br><a href="contato">Contato</a>`);
+    res.send(`Obrigado ${nome} pelo contato! Seu email é ${email}, assunto: ${assunto}, mensagem: ${mensagem} <br><a href="/">Principal</a>`);
 });
 
 app.get('/api/lanches', (req, res) => {
