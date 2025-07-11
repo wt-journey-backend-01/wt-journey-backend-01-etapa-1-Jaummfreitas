@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 app.get('/sugestao', (req, res) => {
     const nome = req.query.nome;
     const ingredientes = req.query.ingredientes;
-    res.send(`Obrigado ${nome} pela sugestão dos ingredientes: ${ingredientes}`);
+    res.send(`Obrigado ${nome} pela sugestão dos ingredientes: ${ingredientes} <br><a href="/">Principal</a>`);
 });
 
 app.get('/contato', (req, res) => {
@@ -29,7 +29,7 @@ app.post('/contato', (req, res) => {
     const email = req.body.email;
     const assunto = req.body.assunto;
     const mensagem = req.body.mensagem;
-    res.send(`Obrigado ${nome} pelo contato! Seu email é ${email}, assunto: ${assunto}, mensagem: ${mensagem}`);
+    res.send(`Obrigado ${nome} pelo contato! Seu email é ${email}, assunto: ${assunto}, mensagem: ${mensagem} <br><a href="contato">Contato</a>`);
 });
 
 app.get('/api/lanches', (req, res) => {
